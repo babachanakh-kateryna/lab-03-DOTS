@@ -23,7 +23,7 @@ class TestTask1302 {
         )
 
         // Check the result
-        assertEquals(expectedOutput, repeater.repeatArray())
+        assertEquals(expectedOutput, repeater.repeatArray)
     }
 
     @Test
@@ -43,6 +43,6 @@ class TestTask1302 {
         )
 
         // Check the result
-        assertEquals(expectedOutput, repeater.repeatArray())
+        assertEquals(expectedOutput, repeater.repeatArray)
     }
 }

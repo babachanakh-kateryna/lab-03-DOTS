@@ -12,18 +12,26 @@ class ArrayRepeater(private val array: List<Int>) {
     /**
      * Method to repeat the array k times
      */
-    fun repeatArray(): List<String> {
-        return List(k) { array.joinToString(" ") }
-    }
+    val repeatArray: List<String> = List(k) { array.joinToString(" ") }
 }
 
 /**
  * Main program
  */
 fun main() {
-    val n = readLine()!!.toInt()
-    val inputArray = readLine()!!.split(" ").map { it.toInt() }
+    val result = try {
+        val n = readLine()!!.toInt()
+        val inputArray = readLine()!!.split(" ").map { it.toInt() }
 
-    val arrayRepeater = ArrayRepeater(inputArray)
-    arrayRepeater.repeatArray().forEach { println(it) }
+        // check if the array size matches n
+        if (n != inputArray.size) throw IllegalArgumentException("Array size doesn't match n")
+
+        // Create an instance and get repeated output
+        ArrayRepeater(inputArray).repeatArray
+    } catch (e: Exception) {
+        listOf("Error: ${e.message}")
+    }
+
+    // result
+    result.forEach { println(it) }
 }
