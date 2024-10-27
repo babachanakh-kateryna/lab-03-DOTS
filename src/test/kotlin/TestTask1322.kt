@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
 /**
- * Tests for Task 1322
+ * Tests for Task 1322.
  */
 class TestTask1322 {
     @Test
