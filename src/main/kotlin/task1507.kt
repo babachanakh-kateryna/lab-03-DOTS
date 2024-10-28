@@ -30,9 +30,9 @@ fun main() {
     val result = try {
         MatrixExtractor(n, m, matrix, columnsToExtract).extractedColumns
     } catch (e: Exception) {
-        "Error: ${e.message}"
+        listOf("Error: ${e.message}")
     }
 
     //result
-    println(result)
+    result.forEach { println(it) }
 }
